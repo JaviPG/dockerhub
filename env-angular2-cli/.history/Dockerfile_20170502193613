@@ -1,0 +1,10 @@
+# Create image based on the official Node 6 image from dockerhub
+FROM node:7.9-alpine
+
+MAINTAINER javipg92@gmail.com
+
+# Create a directory where our app will be placed
+RUN mkdir -p /project && npm install -g typescript@2.3.2
+
+# Expose the port the app runs in
+EXPOSE 4000
